@@ -1,0 +1,27 @@
+<div class="register--header">
+  <h1>Register User</h1>
+  <div>
+    <span *ngIf="valid">
+      User Created!
+    </span>
+  </div>
+
+
+</div>
+<div class="register--body">
+  <div>
+    <input [(ngModel)]="user.name" placeholder="Username.." (keypress)="refreshValidation()"/>
+    <span>{{usernameError}}</span>
+  </div>
+  <div>
+    <input [(ngModel)]="user.password" type="password" placeholder="Password.." (keypress)="refreshValidation()"/>
+    <span>{{passwordError}}</span>
+  </div>
+  <div>
+    <input [(ngModel)]="user.passwordConfirm" type="password" placeholder="Confirm Password.." (keypress)="refreshValidation()"/>
+    <span>{{passwordConfirmError}}</span>
+  </div>
+</div>
+<div class="register--footer">
+  <button (click)="validateSubmission()" [class.valid]="valid">Submit</button>
+</div>

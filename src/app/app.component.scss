@@ -1,0 +1,46 @@
+@import "../vars.scss";
+
+html{
+  width:100%;
+  height: 100%;
+}
+body{
+  width:100%;
+  height:100%;
+  margin:0;
+  background-color: $gray;
+  font-family: $font-fam;
+
+
+}
+
+app-root{
+  height:100%;
+  width:100%;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+
+}
+p,h1,h2,label{
+  color:$primary;
+}
+
+input{
+  background:none;
+  border:none;
+  color:$primary;
+  font-size:1.25rem;
+  border-bottom: solid 0.1rem $primary;
+
+  transition-property: border-color font-size border-bottom-width;
+  transition-duration: 500ms;
+  transition-timing-function: ease-in-out;
+
+  &:focus{
+    border-color:$subtle;
+    outline:none;
+    font-size:1.5rem;
+    border-bottom-width: 0.15rem;
+  }
+}
